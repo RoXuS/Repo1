@@ -1,10 +1,13 @@
 const express = require('express');
 const app = express();
 
+const cors = require('cors')
 const { quotes } = require('./data');
 const { getRandomElement } = require('./utils');
 
 const PORT = process.env.PORT || 4001;
+
+app.use(cors())
 
 app.use(express.static('public'));
 

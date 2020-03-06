@@ -6,9 +6,7 @@ const { getRandomElement } = require('./utils');
 
 const PORT = process.env.PORT || 4001;
 
-app.use(express.
-    
-    static('public'));
+app.use(express.static('public'));
 
 app.get('/api/quotes/random', (req, res, next) => {
     const randomQuote = getRandomElement(quotes);
@@ -30,9 +28,10 @@ app.get('/api/quotes', (req, res, next) => {
 app.post('/api/quotes/add', (req, res, next) => {
     const newQuote = {
         quote: req.query.quote,
-        person: req.query.person
+        person: req.query.person,
+        id: req.query.id
         };
-        if (newQuote.quote && newQuote.person) {
+        if (newQuote.quote && newQuote.person && newQuote.id) {
         quotes.push(newQuote);
         res.send({ quote: newQuote });
         } else {

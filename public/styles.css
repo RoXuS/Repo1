@@ -56,13 +56,37 @@ button:hover {
 
 #quote-container {
   padding: 10px;
-  width: 60%;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .single-quote {
   padding: 10px;
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 30px;
+}
+
+.attribution {
+  width: 100%;
 }
 
 .quote-text {
   font-style: italic;
 }
+
+#quoteDiv {
+  padding-bottom: 5px;
+}
+
+#authorDiv {
+  padding-bottom: 5px;
+}
+
+#idDiv {
+  width: 80%;
+}
+

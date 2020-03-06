@@ -4,8 +4,9 @@ const newQuoteContainer = document.getElementById('new-quote');
 submitButton.addEventListener('click', () => {
   const quote = document.getElementById('quote').value;
   const person = document.getElementById('person').value;
+  const randomNumber = (Math.floor(Math.random() * 10000));
 
-  fetch(`/api/quotes/add?quote=${quote}&person=${person}`, {
+  fetch(`/api/quotes/add?quote=${quote}&person=${person}&id=${randomNumber}`, {
     method: 'POST',
   })
   .then(response => response.json())
